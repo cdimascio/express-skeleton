@@ -8,7 +8,7 @@ class ExamplesRoutes {
   }
 
   init() {
-    this._router.get('/', this._ec.examples);
+    this._router.get('/', ::this._ec.examples);
 
     return this._router;
   }
