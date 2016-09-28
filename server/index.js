@@ -1,13 +1,6 @@
-import App from './config';
-import express from 'express';
-import Routes from './routes';
+import Server from './common/server';
+import routes from './routes';
 
-const expressApp = express();
-
-App
-  .initialize(
-    expressApp,
-    app => Routes.init(app))
+export default new Server()
+  .router(routes)
   .listen();
-
-export default expressApp;

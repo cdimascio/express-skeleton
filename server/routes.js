@@ -1,7 +1,4 @@
-import ExampleRoutes from './api/controllers/examples/routes';
-
-export default class Routes {
-  static init(app) {
-    app.use('/api/v1/examples',new ExampleRoutes().init());
-  }
-}
+import examplesRouter from './api/controllers/example/router'
+export default function routes(app) {
+  app.use('/api/v1',examplesRouter);
+};
